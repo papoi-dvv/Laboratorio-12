@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281247874526",
+    "project_id": "authfirebaseapp-5897b",
+    "storage_bucket": "authfirebaseapp-5897b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281247874526:android:99d2b6c4a5e65e9fe0f14f",
+        "android_client_info": {
+          "package_name": "edu.pe.tecsup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRMaDQ4dnjYdWnu_HIjgJgEzzbFTNFGC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
