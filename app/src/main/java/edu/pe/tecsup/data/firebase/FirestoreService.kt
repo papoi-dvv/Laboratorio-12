@@ -9,7 +9,12 @@ class FirestoreService {
     private val cursosRef = db.collection("cursos")
 
     suspend fun addCurso(curso: Curso): String {
-        val docRef = cursosRef.add(curso).await()
+        val cursoData = mapOf(
+            "titulo" to curso.titulo,
+            "descripcion" to curso.descripcion,
+            "userId" to curso.userId
+        )
+        val docRef = cursosRef.add(cursoData).await()
         return docRef.id
     }
 
@@ -37,7 +42,12 @@ class FirestoreService {
     }
 
     suspend fun updateCurso(id: String, curso: Curso) {
-        cursosRef.document(id).set(curso).await()
+        val cursoData = mapOf(
+            "titulo" to curso.titulo,
+            "descripcion" to curso.descripcion,
+            "userId" to curso.userId
+        )
+        cursosRef.document(id).set(cursoData).await()
     }
 
     suspend fun deleteCurso(id: String) {
