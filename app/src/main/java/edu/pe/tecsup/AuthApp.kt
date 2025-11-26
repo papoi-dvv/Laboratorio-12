@@ -1,11 +1,13 @@
 package edu.pe.tecsup
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import edu.pe.tecsup.ui.auth.LoginScreen
+import edu.pe.tecsup.ui.auth.RegisterScreen
+import edu.pe.tecsup.ui.home.HomeScreen
 
 object Destinations {
     const val LOGIN = "login"
@@ -40,8 +42,8 @@ fun AuthNavGraph(navController: NavHostController) {
         composable(Destinations.REGISTER){
             RegisterScreen(
                 onRegisterSuccess = {
-                    navController.navigate(Destinations.HOME){
-                        popUpTo(Destinations.LOGIN) {inclusive=true}
+                    navController.navigate(Destinations.HOME) {
+                        popUpTo(Destinations.LOGIN) { inclusive = true }
                     }
                 },
                 onNavigateBack = {
@@ -53,8 +55,8 @@ fun AuthNavGraph(navController: NavHostController) {
         composable(Destinations.HOME){
             HomeScreen(
                 onLogout = {
-                    navController.navigate(Destinations.LOGIN){
-                        popUpTo(Destinations.HOME) {inclusive= true}
+                    navController.navigate(Destinations.LOGIN) {
+                        popUpTo(Destinations.HOME) { inclusive = true }
                     }
                 }
             )

@@ -1,4 +1,4 @@
-package edu.pe.tecsup
+package edu.pe.tecsup.ui.auth
 
 import android.widget.Toast
 import androidx.compose.foundation.Image
@@ -13,6 +13,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.*
 import com.google.firebase.auth.FirebaseAuth
+import edu.pe.tecsup.R
 
 @Composable
 fun LoginScreen(
